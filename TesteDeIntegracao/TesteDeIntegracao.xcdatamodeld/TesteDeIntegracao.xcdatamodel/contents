@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21G83" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Aula" representedClassName="Aula" syncable="YES" codeGenerationType="category">
+        <attribute name="nome" optional="YES" attributeType="String"/>
+        <relationship name="regente" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Professor" inverseName="aulas" inverseEntity="Professor"/>
+    </entity>
+    <entity name="Professor" representedClassName="Professor" syncable="YES" codeGenerationType="category">
+        <attribute name="idNum" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="nome" attributeType="String" defaultValueString="oi"/>
+        <relationship name="aulas" optional="YES" transient="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Aula" inverseName="regente" inverseEntity="Aula"/>
+    </entity>
+    <elements>
+        <element name="Aula" positionX="-333.338134765625" positionY="-253.3704833984375" width="115.34912109375" height="59"/>
+        <element name="Professor" positionX="-1.1109619140625" positionY="-268.3346557617188" width="128" height="74"/>
+    </elements>
+</model>
